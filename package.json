@@ -1,6 +1,6 @@
 {
   "name": "card-code-template",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,6 +10,6 @@
   "license": "ISC",
   "description": "",
   "devDependencies": {
-    "investec-card-cli": "^1.0.5"
+    "investec-card-cli": "^1.0.6"
   }
 }
