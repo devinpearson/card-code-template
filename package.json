@@ -10,6 +10,6 @@
   "license": "ISC",
   "description": "",
   "devDependencies": {
-    "investec-card-cli": "^1.0.3"
+    "investec-card-cli": "^1.0.5"
   }
 }
