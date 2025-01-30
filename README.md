@@ -6,6 +6,12 @@ Copy over the `.env.example` file to `.env` and fill in the required fields.
 ```sh
 cp .env.example .env
 ```
+
+The .env file is for your local environment and the .env.prod file is for the production environment.
+```sh
+cp .env.example .env.prod
+```
+
 To install the dependencies, run the following command:
 ```sh
 npm install
@@ -13,22 +19,26 @@ npm install
 ## Usage
 To run the code locally, run the following command:
 ```sh
-npx investec-card-cli run main.js --environment "env.json" --amount 60000 --currency ZAR --mcc 0000 --merchant "Test Merchant" --city "Test City" --country ZA
+npx ipb run -f main.js --env prod --amount 60000 --currency ZAR --mcc 0000 --merchant "Test Merchant" --city "Test City" --country ZA
 ```
 
 To upload code you will need a card key this can be retireved by calling the following command:
 ```sh
-npx investec-card-cli fetch-cards
+npx ipb fetch-cards
 ```
 
-To upload code to the card, run the following command by setting the card key and the file to upload:
+To upload code to the card, run the following command by setting the card key, the file and the env to upload:
+The env is optional and needs the file to be .env.prod if you specify prod
+
 ```sh
-npx investec-card-cli upload 700615 main.js
+npx ipb deploy -c <cardkey> -f main.js --env prod
 ```
-To upload your environment variables to the card, run the following command:
+
+You can get your card execution logs with the following command
 ```sh
-npx investec-card-cli upload-env 700615 env.json
+npx ipb logs -c <cardkey>
 ```
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
