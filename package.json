@@ -10,6 +10,6 @@
   "license": "ISC",
   "description": "",
   "devDependencies": {
-    "investec-ipb": "^0.4.0"
+    "investec-ipb": "^0.5.1"
   }
 }

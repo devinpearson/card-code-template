@@ -16,6 +16,13 @@ To install the dependencies, run the following command:
 ```sh
 npm install
 ```
+## Configuration
+To configure the CLI, run the following command:
+```bash
+npx ipb config --client-id <client-id> --client-secret <client-secret> --card-id <card-id>
+```
+The card id is optional and can be set when calling each command. If you specify a card when calling a command, it will override the card id set in the configuration.
+
 ## Usage
 To run the code locally, run the following command:
 ```sh
@@ -24,7 +31,7 @@ npx ipb run -f main.js --env prod --amount 60000 --currency ZAR --mcc 0000 --mer
 
 To upload code you will need a card key this can be retireved by calling the following command:
 ```sh
-npx ipb fetch-cards
+npx ipb cards
 ```
 
 To upload code to the card, run the following command by setting the card key, the file and the env to upload:
@@ -36,7 +43,7 @@ npx ipb deploy -c <cardkey> -f main.js --env prod
 
 You can get your card execution logs with the following command
 ```sh
-npx ipb logs -c <cardkey>
+npx ipb logs -f <filename> -c <cardkey>
 ```
 
 ## License
