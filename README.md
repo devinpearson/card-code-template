@@ -2,6 +2,12 @@
 
 This is a template for Investec card code. This is schaffolding sets up  a project with the tools to upload code to the Investec card.
 
+## 🌟 Community-Powered Repository 🌟
+
+This repository is crafted with ❤️ by our talented community members. It's a space for everyone to use, contribute to, and share. While it aligns with the spirit of our community, please note that this repo is not directly endorsed or supported by Investec. Always exercise caution and discretion when using or contributing to community-driven projects.
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 Copy over the `.env.example` file to `.env` and fill in the required fields.
 ```sh
 cp .env.example .env
@@ -17,6 +23,9 @@ To install the dependencies, run the following command:
 npm install
 ```
 ## Configuration
+You can access your client id, client secret and api key from the Investec Developer Portal.
+More information on how to access your keys can be found on the [Investec Developer Community Wiki](https://investec.gitbook.io/programmable-banking-community-wiki/get-started/api-quick-start-guide/how-to-get-your-api-keys).
+
 To configure the CLI, run the following command:
 ```bash
 npx ipb config --client-id <client-id> --client-secret <client-secret> --card-id <card-id>
